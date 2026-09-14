@@ -1,0 +1,44 @@
+/* İnfüzyon Hesaplayıcı — site. Renkler uygulamanın kendi paleti (Palet.kt). */
+:root {
+  --zemin: #f6f8fa; --kart: #ffffff; --metin: #0b1a22; --solgun: #5b7280;
+  --cizgi: #dde4e9; --vurgu: #0e7490; --vurgu-yumusak: #e0f7fb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #070f14; --kart: #0f1d24; --metin: #f3f7f9; --solgun: #7e95a3;
+    --cizgi: #1b2b34; --vurgu: #22d3ee; --vurgu-yumusak: #0a2a33;
+  }
+}
+* { box-sizing: border-box; }
+html { color-scheme: light dark; }
+body {
+  margin: 0; background: var(--zemin); color: var(--metin);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+header img { width: 48px; height: 48px; border-radius: 12px; }
+header .ad { font-weight: 700; font-size: 18px; }
+header .alt { color: var(--solgun); font-size: 14px; }
+nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; margin: 18px 0 28px; }
+nav a { color: var(--vurgu); text-decoration: none; }
+nav a[aria-current] { font-weight: 600; text-decoration: underline; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 18px; margin: 32px 0 8px; }
+.tarih { color: var(--solgun); font-size: 14px; margin: 0 0 24px; }
+.kart {
+  background: var(--kart); border: 1px solid var(--cizgi); border-radius: 14px;
+  padding: 16px 18px; margin: 16px 0;
+}
+.vurgu { background: var(--vurgu-yumusak); border-color: transparent; }
+a { color: var(--vurgu); }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+.dil { float: right; font-size: 14px; }
+.rozetler { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+.rozet {
+  display: inline-block; padding: 10px 16px; border-radius: 10px; font-weight: 600;
+  background: var(--vurgu); color: #fff; text-decoration: none; font-size: 14px;
+}
+.rozet.pasif { background: var(--cizgi); color: var(--solgun); pointer-events: none; }
+footer { margin-top: 48px; color: var(--solgun); font-size: 13px; border-top: 1px solid var(--cizgi); padding-top: 16px; }
